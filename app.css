@@ -56293,7 +56293,9 @@ html, body {
       background: var(--color);
       color: white;
       border-bottom-color: var(--color); }
-  html #diagram *, body #diagram * {
+  html #diagram .overlay, html #sysmap .overlay, body #diagram .overlay, body #sysmap .overlay {
+    fill: var(--bg) !important; }
+  html #diagram *, html #sysmap *, body #diagram *, body #sysmap * {
     stroke-width: 1px !important; }
   html ul li:before, body ul li:before {
     content: "";
@@ -56303,3 +56305,27 @@ html, body {
     display: inline-block;
     border-radius: 0.3em;
     margin-right: 0.6em; }
+  html #menu, body #menu {
+    display: none; }
+  @media only screen and (max-width: 576px) {
+    html #layout, body #layout {
+      flex-direction: column !important; }
+    html #menu, body #menu {
+      display: block !important; }
+    html #nav, body #nav {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      display: none; }
+      html #nav.active, body #nav.active {
+        display: flex; }
+    html #page, body #page {
+      max-width: 100% !important; }
+    html pre, body pre {
+      display: flex;
+      overflow-x: scroll;
+      max-width: calc(100vw - 2em) !important; }
+    html #linky, html .button, body #linky, body .button {
+      position: relative;
+      min-width: 100%;
+      display: block !important; } }
