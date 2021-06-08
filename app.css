@@ -56305,6 +56305,8 @@ html, body {
     display: inline-block;
     border-radius: 0.3em;
     margin-right: 0.6em; }
+  html img, body img {
+    max-width: 100%; }
   html #menu, body #menu {
     display: none; }
   @media only screen and (max-width: 576px) {
